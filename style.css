@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+}
+
+
+body{
+    background: #222;
+}
+
+.outside-box{
+background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(143, 143, 189, 1) 0%, rgba(125, 125, 240, 1) 11%, rgba(122, 122, 240, 1) 37%, rgba(146, 161, 252, 1) 61%, rgba(166, 217, 227, 1) 100%);;
+color: #fff;
+width: 80%;
+max-width: 400px;
+margin: 100px auto 0;
+padding:40px 35px;
+text-align: center;
+border-radius: 30px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 1rem;
+    font-size: 1.125rem;
+    opacity: 0.85;
+}
+
+input:hover{
+    opacity: 1;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 1.125rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.85;
+}
+button:hover{
+    opacity: 1;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;   
+}
+.temp{
+    font-size: 45px;
+    font-weight: 500;
+}
+.city{
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+}
+
+
+.col img{
+    height: 35px;
+}
+
+p{
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+
+.Weather{
+    display: none;
+    margin-top: 10px;
+}
+
+.error{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    display: none;
+}
+
+
+.outside-box {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25),
+    0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Search bar shadow */
+.search input {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.search button {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather section shadow */
+.Weather {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .outside-box {
+    width: 90%;
+    margin-top: 60px;
+  }
+
+  .details {
+    gap: 16px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 600px) {
+  .outside-box {
+    width: 95%;
+    margin-top: 40px;
+  }
+
+  .temp {
+    font-size: 40px;
+  }
+
+  .city {
+    font-size: 22px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .outside-box {
+    width: 100%;
+    margin-top: 20px;
+    padding: 22px;
+  }
+
+  .temp {
+    font-size: 34px;
+  }
+
+  .city {
+    font-size: 20px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* ---- BACKGROUND (Animated Gradient) ---- */
+body {
+  background: linear-gradient(
+    -45deg,
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #1c1c3c
+  );
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---- CARD FLOATING EFFECT ---- */
+.outside-box {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.weather-icon {
+  animation: breathe 3.5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.temp {
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.details .col {
+  transition: transform 0.25s ease;
+}
+
+.details .col:hover {
+  transform: translateY(-4px);
+}
+
+.search button:active {
+  transform: scale(0.92);
+}
+
+@media (max-width: 600px) {
+  .outside-box {
+    animation: floatCardMobile 6s ease-in-out infinite;
+  }
+
+  @keyframes floatCardMobile {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+}
+
