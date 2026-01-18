@@ -135,7 +135,6 @@ p{
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Weather section shadow */
 .Weather {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -191,7 +190,6 @@ p{
   }
 }
 
-/* ---- BACKGROUND (Animated Gradient) ---- */
 body {
   background: linear-gradient(
     -45deg,
@@ -260,4 +258,5 @@ body {
     100% { transform: translateY(0); }
   }
 }
+
 
